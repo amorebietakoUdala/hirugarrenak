@@ -1,0 +1,56 @@
+message.appTitle: "Terceros"
+link.logout: "Salir"
+
+# Menu
+navitem.thirds: "Terceros"
+navitem.thirds.list: "Lista"
+
+# Labels
+label.options: 'Opciones'
+label.yes: "Sí"
+label.no: "No"
+label.notDefined: "No definido"
+
+check.third: "Comprobar"
+check.language: "Preferencia de idioma"
+check.errolda: "Empadronamiento"
+check.debts: "Deudas"
+
+# Titles
+title.third.search: "Buscar"
+title.third.edit: "Editar"
+title.third.show: "Ver"
+
+# Entities
+third.id: "Id"
+third.full_name: "Nombre completo"
+third.nif: "NIF"
+third.language_preference: "Preferencia de idioma"
+third.address: "Direccion"
+third.number: "Número"
+third.zone: "Zona"
+third.province: "Provincia"
+third.country: "País"
+third.door: "Puerta"
+third.floor: "Planta"
+third.zip_code: "Código postal"
+third.type_of_road: "Tipo de vía"
+third.default_address: "Dirección por defecto"
+third.erroldatua: "Empadronado"
+
+# Buttons
+btn.cancel: "Cancelar"
+btn.save: "Guardar"
+btn.new: "Nuevo"
+
+# Messages
+message.results0: "No hay resultados"
+#message.fillAtLeastOneField: "El id o DNI son obligatorios"
+message.nifRequiredForLanguageCheck: "Debe introducir el DNI, NIF, NIE o pasaporte"
+es: "Castellano"
+eu: "Euskera"
+
+# Mail
+
+
+

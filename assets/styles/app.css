@@ -1,3 +1,40 @@
+@import '~bootstrap';
+
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
 body {
-    background-color: skyblue;
+    padding: 0.1em 0.1em 0.1em 0.1em;
+    line-height: 1;
+    margin-bottom: 2.5rem;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 150px auto 200px 100px;
+    grid-template-areas: "logo titulo erabiltzailea idioma";
+    justify-content: space-beetween;
+    text-align: center;
+    align-items: center;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+}
+
+.titulua {
+    display: flex;
+    text-align: center;
+}
+
+.avatar {
+    float: right;
+    height: 3rem;
+    border-radius: 3rem;
+}
+
+.fixed-bottom-right {
+    position: fixed;
+    right: 20px;
+    bottom: 50px;
 }

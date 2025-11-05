@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {% set title = readonly ? 'title.third.show' | trans : 'title.third.edit' | trans %}
+    {{ title }}
+{% endblock %}
+
+{% block body %}
+    {{ include('third/_form.html.twig',{
+        'readonly': readonly
+    }) }}
+    {# {{ include('common/_alert.html.twig') }} #}
+{% endblock %}

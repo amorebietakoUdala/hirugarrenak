@@ -1,29 +1,53 @@
 doctrine:
     dbal:
-        url: '%env(resolve:DATABASE_URL)%'
+        default_connection: mysql
+        connections:
+            mysql:
+                # IMPORTANT: You MUST configure your server version,
+                # either here or in the DATABASE_URL env var (see .env file)
+                #server_version: '15'
+                url: "%env(resolve:DATABASE_URL)%"
+                driver: "pdo_mysql"
+#                server_version: "8.0.35"
+                charset: utf8mb4
+                default_table_options:
+                    charset: utf8mb4
+                    collate: utf8mb4_unicode_ci
+            errolda:
+                schema_filter: ~^.*$~
+                driver: "%env(resolve:ERROLDA_DATABASE_DRIVER)%"
+                host: "%env(resolve:ERROLDA_DATABASE_HOST)%"
+                port: "%env(resolve:ERROLDA_DATABASE_PORT)%"
+                dbname: "%env(resolve:ERROLDA_DATABASE_NAME)%"
+                user: "%env(resolve:ERROLDA_DATABASE_USER)%"
+                password: "%env(resolve:ERROLDA_DATABASE_PASSWORD)%"
+                charset: "WE8MSWIN1252"
 
-        # IMPORTANT: You MUST configure your server version,
-        # either here or in the DATABASE_URL env var (see .env file)
-        #server_version: '16'
-
-        profiling_collect_backtrace: '%kernel.debug%'
-        use_savepoints: true
     orm:
         auto_generate_proxy_classes: true
         enable_lazy_ghost_objects: true
-        report_fields_where_declared: true
-        validate_xml_mapping: true
-        naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
-        identity_generation_preferences:
-            Doctrine\DBAL\Platforms\PostgreSQLPlatform: identity
-        auto_mapping: true
-        mappings:
-            App:
-                type: attribute
-                is_bundle: false
-                dir: '%kernel.project_dir%/src/Entity'
-                prefix: 'App\Entity'
-                alias: App
+        entity_managers:
+            default:
+                connection: mysql
+                auto_mapping: true
+                report_fields_where_declared: true
+                naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
+                mappings:
+                    App:
+                        is_bundle: false
+                        type: attribute
+                        dir: "%kernel.project_dir%/src/Entity"
+                        prefix: 'App\Entity'
+            errolda:
+                connection: errolda
+                report_fields_where_declared: true
+                mappings:
+                    Errolda:
+                        is_bundle: false
+                        type: attribute
+                        dir: "%kernel.project_dir%/src/Entity/Errolda"
+                        prefix: 'App\Entity\Errolda'
+                        alias: "Errolda"
         controller_resolver:
             auto_mapping: false
 

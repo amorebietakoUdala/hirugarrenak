@@ -1,0 +1,82 @@
+{% block message %}
+	{{ include('common/_messages.html.twig') }}
+{% endblock %}
+
+<div class="container-fluid">
+	{{ form_start(form, {attr: {novalidate: 'novalidate'}}) }}
+	<div class="row">
+		<div class="col-lg-2">
+			{{ form_label(form.id) }}
+			{{ form_widget(form.id, {'attr': {'class': 'form-control form-control-sm'}}) }}
+		</div>
+
+		<div class="col-lg-2">
+			{{ form_label(form.nif) }}
+			{{ form_widget(form.nif, {'attr': {'class': 'form-control form-control-sm'}}) }}
+		</div>
+
+		<div class="col-lg-2">
+			{{ form_label(form.full_name) }}
+			{{ form_widget(form.full_name, {'attr': {'class': 'form-control form-control-sm'}}) }}
+		</div>
+
+		<div class="col-lg-2">
+			{{ form_label(form.language_preference) }}
+			{{ form_widget(form.language_preference, {'attr': {'class': 'form-control form-control-sm'}}) }}
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-2">
+			{{ form_label(form.address) }}
+			{{ form_widget(form.address, {'attr': {'class': 'form-control form-control-sm'}}) }}
+		</div>
+
+		<div class="col-lg-2">
+			{{ form_label(form.number) }}
+			{{ form_widget(form.number, {'attr': {'class': 'form-control form-control-sm'}}) }}
+		</div>
+		<div class="col-lg-2">
+			{{ form_label(form.floor) }}
+			{{ form_widget(form.floor, {'attr': {'class': 'form-control form-control-sm'}}) }}
+		</div>
+		<div class="col-lg-2">
+			{{ form_label(form.door) }}
+			{{ form_widget(form.door, {'attr': {'class': 'form-control form-control-sm'}}) }}
+		</div>
+		<div class="col-lg-2">
+			{{ form_label(form.zone) }}
+			{{ form_widget(form.zone, {'attr': {'class': 'form-control form-control-sm'}}) }}
+		</div>
+		<div class="col-lg-2">
+			{{ form_label(form.zip_code) }}
+			{{ form_widget(form.zip_code, {'attr': {'class': 'form-control form-control-sm'}}) }}
+		</div>
+		<div class="col-lg-2">
+			{{ form_label(form.province) }}
+			{{ form_widget(form.province, {'attr': {'class': 'form-control form-control-sm'}}) }}
+		</div>
+		<div class="col-lg-2">
+			{{ form_label(form.country) }}
+			{{ form_widget(form.country, {'attr': {'class': 'form-control form-control-sm'}}) }}
+		</div>
+		<div class="col-lg-2 ">
+			{{ form_label(form.type_of_road) }}
+			{{ form_widget(form.type_of_road, {'attr': {'class': 'form-control form-control-sm'}}) }}
+		</div>
+		<div class="col-lg-2">
+			{{ form_label(form.default_address) }}
+			{{ form_widget(form.default_address, {'attr': {'class': 'text-dark mt-4 form-control form-control-sm'}}) }}
+		</div>
+
+	</div>
+	<div class="row">
+		<div id="buttons" class="mt-2">
+			<a href="{{ returnUrl is defined and not returnUrl is empty ? returnUrl : path('third_index') }}" class="btn btn-secondary">{{ 'btn.cancel' | trans }}</a>
+			{% if not readonly %}
+				<button class="btn btn-primary" formnovalidate>{{ 'btn.save' | trans }}</button>
+			{% endif %}
+		</div>
+	</div>
+	{{ form_widget(form._token) }}
+	{{ form_end(form, {'render_rest': false}) }}
+</div>

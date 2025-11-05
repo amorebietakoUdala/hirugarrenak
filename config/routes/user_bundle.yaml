@@ -1,0 +1,8 @@
+user_bundle:
+  resource: "@UserBundle/Resources/config/security.xml"
+  prefix: "/{_locale}"
+
+user_bundle_admin:
+  resource: "@UserBundle/Resources/config/user-admin.xml"
+  prefix: "/{_locale}"
+

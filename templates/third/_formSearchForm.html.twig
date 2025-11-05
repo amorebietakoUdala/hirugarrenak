@@ -1,0 +1,34 @@
+<div class="container-fluid">
+	{{ form_start(form, {attr: {novalidate: 'novalidate'}}) }}
+	<div
+		class="row align-items-end">
+		<!-- Id -->
+		{# <div class="col-md-1 mb-3">
+			{{ form_row(form.id, {
+                'attr': {'class': 'form-control form-control-sm'},
+                'row_attr': {'class': 'mb-0'}
+            }) }}
+		</div>
+ #}
+		<!-- nif -->
+		<div class="col-lg-1 col-md-1 mb-3">
+			{{ form_row(form.nif, {
+        'attr': {'class': 'form-control form-control-sm'},
+        'row_attr': {'class': 'mb-0'}
+    }) }}
+		</div>
+
+		<div class="col-lg-auto col-md-2 mb-3">
+			{{ form_row(form.check, {
+        'attr': {'class': 'form-select form-select-sm'},
+        'row_attr': {'class': 'mb-0'}
+    }) }}
+		</div>
+
+		<!-- Botón de búsqueda -->
+		<div class="col-md-2 mb-3">
+			<button type="submit" class="btn btn-primary btn">Buscar</button>
+		</div>
+	</div>
+	{{ form_end(form) }}
+</div>

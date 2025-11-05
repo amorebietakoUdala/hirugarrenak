@@ -1,0 +1,53 @@
+message.appTitle: "Hirugarrenak"
+link.logout: "Salir"
+
+# Menu
+navitem.thirds: "Hirugarrenak"
+navitem.thirds.list: "Zerrenda"
+
+# Labels
+label.options: 'Aukerak'
+label.yes: "Bai"
+label.no: "Ez"
+label.notDefined: "Zehaztu gabea"
+
+check.third: "Konprobatu"
+check.language: "Hizkuntza lehentasuna"
+check.errolda: "Erroldaketa"
+check.debts: "Zorrak"
+
+# Titles
+title.third.search: "Bilatu"
+title.third.edit: "Editatu"
+title.third.show: "Ikusi"
+
+# Entities
+third.id: "Id"
+third.full_name: "Izen abizenak"
+third.nif: "NAN"
+third.language_preference: "Harremanetarako hizkuntza"
+third.address: "Helbidea"
+third.number: "Zenbakia"
+third.zone: "Zonaldea"
+third.province: "Probintzia"
+third.country: "Herrialdea"
+third.door: "Atea"
+third.floor: "Solairua"
+third.zip_code: "Posta kodea"
+third.type_of_road: "Errepide mota"
+third.default_address: "Lehenetsitako helbidea"
+third.erroldatua: "Erroldatua"
+
+# Buttons
+btn.cancel: "Utzi"
+btn.save: "Gorde"
+btn.new: "Berria"
+
+# Messages
+message.results0: "Ez da emaitzarik aurkitu"
+#message.fillAtLeastOneField: "IDa edo NANa derrigorrezkoak dira"
+message.nifRequiredForLanguageCheck: "NANa, IFK, AIZ edo pasaportea"
+es: "Erdara"
+eu: "Euskara"
+
+# Mail

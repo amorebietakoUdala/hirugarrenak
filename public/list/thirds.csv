@@ -1,0 +1,28 @@
+full_name,nif_country,id,nif,first_name,first_surname,second_surname,type,notification_channel,email,nif_type,version,links
+"Alejandro López Castro",ESP,d6f140bd-096e-48f9-8f2f-e0ac582d0ac0,52839678F,Alejandro,López,Castro,PHISIC,PAPER,alejandro.lopez@developers.es,NIF,0,Array
+"Ana García López",ESP,b6d2a3eb-9226-4ce0-bc1e-346f44165214,12345678Z,Ana,García,López,PHISIC,PAPER,ana.garcia@developers.es,NIF,0,Array
+"Andrés Jiménez Serrano",ESP,e2653e8f-66c4-452d-861d-e37a93f4117d,19520040D,Andrés,Jiménez,Serrano,PHISIC,PAPER,andres.jimenez@developers.es,NIF,0,Array
+"BARTOLOME VERA",ESP,b64291c0-d598-4e66-8251-6156eda4ce50,14139591L,BARTOLOME,VERA,PHISIC,TELEMATIC,NIF,0,Array
+"Carlos Hernández Muñoz",ESP,e68679a0-bb6a-4a60-b721-faed7bba2a76,28014219N,Carlos,Hernández,Muñoz,PHISIC,PAPER,carlos.hernandez@developers.es,NIF,0,Array
+"Carmen Pérez Díaz",ESP,56890439-0653-45d8-8335-62993c99bd95,44112854G,Carmen,Pérez,Díaz,PHISIC,PAPER,carmen.perez@developers.es,NIF,0,Array
+"Cristina Ruiz Peña",ESP,cb28b0a8-196e-47e9-8bd9-b4ca8615bb73,82810720W,Cristina,Ruiz,Peña,PHISIC,PAPER,cristina.ruiz@developers.es,NIF,0,Array
+"David Moreno Cano",ESP,103ee77c-700f-4c9c-8f89-1cfdb9efe09c,69436863R,David,Moreno,Cano,PHISIC,PAPER,david.moreno@developers.es,NIF,0,Array
+"DIANA GRANADOS",ESP,f6c01418-52ef-4cf6-9ff9-9b4a65e54b67,53329819H,DIANA,GRANADOS,PHISIC,TELEMATIC,NIF,0,Array
+"Elena Castro Navarro",ESP,07b92561-69a7-4016-b519-62456dbd4520,47923731B,Elena,Castro,Navarro,PHISIC,PAPER,elena.castro@developers.es,NIF,0,Array
+"ERIK HERNANDEZ",ESP,303e0300-020e-488a-99c0-874362683c49,59604246E,ERIK,HERNANDEZ,PHISIC,TELEMATIC,NIF,0,Array
+"Isabel Gómez Romero",ESP,711ead19-f845-473d-ade5-d1244839ea09,57426225D,Isabel,Gómez,Romero,PHISIC,PAPER,isabel.gomez@developers.es,NIF,0,Array
+"Javier Morales Ruiz",ESP,4f22fd1c-2e2d-4a2d-90af-0bb9fb5e7b39,85756831C,Javier,Morales,Ruiz,PHISIC,PAPER,javier.morales@developers.es,NIF,0,Array
+"JOSE FRANCISCO POVEDA",ESP,es,22e80ee3-1393-4746-86d2-a945438e9617,06679156W,"JOSE FRANCISCO",POVEDA,PHISIC,TELEMATIC,726438367,NIF,0,Array
+"Juan Rodríguez Gómez",ESP,7d70c087-6256-48d2-99e6-9c4eeb1abefd,52630689L,Juan,Rodríguez,Gómez,PHISIC,PAPER,juan.rodriguez@developers.es,NIF,0,Array
+"JUAN MARIA CASTAÑO",ESP,es,dd39c1c9-cec2-4105-8295-97007d30d7d3,89624014Y,"JUAN MARIA",CASTAÑO,PHISIC,TELEMATIC,NIF,0,Array
+"Laura Sánchez Jiménez",ESP,99f855ce-23f4-4a82-84a8-fa575934c604,30294967B,Laura,Sánchez,Jiménez,PHISIC,PAPER,laura.sanchez@developers.es,NIF,0,Array
+"Lucía Fernández Torres",ESP,cb91b46a-4d57-44c0-9fa5-acabaae6c854,23456789D,Lucía,Fernández,Torres,PHISIC,PAPER,lucia.fernandez@developers.es,NIF,0,Array
+"Luis García Medina",ESP,e37bdb5d-fd24-4a4e-80f1-3ce171487123,19968244N,Luis,García,Medina,PHISIC,PAPER,luis.garcia@developers.es,NIF,0,Array
+"Marta Torres Herrera",ESP,2a97a2cf-afbd-4733-bce5-b2a20ca206c9,74053171W,Marta,Torres,Herrera,PHISIC,PAPER,marta.torres@developers.es,NIF,0,Array
+"Pedro Martínez Sánchez",ESP,b3da03ec-b84d-4597-8fa4-23804e69599a,48364987N,Pedro,Martínez,Sánchez,PHISIC,PAPER,pedro.martinez@developers.es,NIF,0,Array
+"Raúl Romero Delgado",ESP,a8e8be1b-5b0e-474f-af49-2879b4dd51e5,01224420S,Raúl,Romero,Delgado,PHISIC,PAPER,raul.romero@developers.es,NIF,0,Array
+"Rosa Martínez Lara",ESP,18672d80-1da6-46d5-a343-20a1c6e9d0c9,37553389R,Rosa,Martínez,Lara,PHISIC,PAPER,rosa.martinez@developers.es,NIF,0,Array
+"Tercero Fernández ondo López ondo",ESP,es,18b62267-dc64-4bb3-940d-2387ea8bbe43,22222222J,Tercero,"Fernández ondo","López ondo",PHISIC,PAPER,NIF,1,Array
+"Tercero Fernández ondo López ondo",ESP,1a63ace2-33f5-4638-bb07-a24b00722f0a,33333333P,Tercero,"Fernández ondo","López ondo",PHISIC,PAPER,NIF,0,Array
+"Teresa Díaz Vargas",ESP,3d99c7cb-6076-4ce1-86db-81e66bfdb2e8,30562063P,Teresa,Díaz,Vargas,PHISIC,PAPER,teresa.diaz@developers.es,NIF,0,Array
+"Víctor Vargas León",ESP,6b889f2f-997e-4917-8e67-177ab200e718,11010472G,Víctor,Vargas,León,PHISIC,PAPER,victor.vargas@developers.es,NIF,0,Array
