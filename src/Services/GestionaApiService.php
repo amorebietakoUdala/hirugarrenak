@@ -13,7 +13,6 @@ final class GestionaApiService extends AbstractController
 {
     // Example filter: {"nif":"00000000T","result":{"expand":["default-address"]}}
     private string $defaultFilter = '{"result":{"expand":["default-address"]}}';
-    //private string $defaultFilter = '{}';
 
     public function __construct(
         private readonly HttpClientInterface $httpClient,
@@ -152,7 +151,6 @@ final class GestionaApiService extends AbstractController
     {
         $filter = ['nif' => $nif];
         $jsonFilter = $this->addFilterFromArray($filter);
-        dump($jsonFilter);
         return $this->getThirds($jsonFilter);
     }
 

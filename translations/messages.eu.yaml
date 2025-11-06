@@ -37,6 +37,7 @@ third.zip_code: "Posta kodea"
 third.type_of_road: "Errepide mota"
 third.default_address: "Lehenetsitako helbidea"
 third.erroldatua: "Erroldatua"
+third.hasDebts: "Zorrak ditu?"
 
 # Buttons
 btn.cancel: "Utzi"
@@ -46,7 +47,7 @@ btn.new: "Berria"
 # Messages
 message.results0: "Ez da emaitzarik aurkitu"
 #message.fillAtLeastOneField: "IDa edo NANa derrigorrezkoak dira"
-message.nifRequiredForLanguageCheck: "NANa, IFK, AIZ edo pasaportea"
+message.nifRequired: "NANa, IFK, AIZ edo pasaportea"
 es: "Erdara"
 eu: "Euskara"
 

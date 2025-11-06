@@ -17,9 +17,16 @@ final class ErroldaApiService extends AbstractController
 
     public function getActiveCitizenByNif(string $nif): ?Habitante
     {
+        if ($this->esNumericoConLetra($nif)) {
+            $nif = str_pad($nif, 9, '0', STR_PAD_LEFT);
+        }
         $repo = $this->erroldaEntityManager->getRepository(Habitante::class);
         $habitante = $repo->findOneByDni($nif);
         return $habitante;
     }
 
+    private function esNumericoConLetra($cadena): bool  {
+        $cadenaSinUltima = substr($cadena, 0, -1);
+        return is_numeric($cadenaSinUltima);
+    }
 }

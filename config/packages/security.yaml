@@ -8,6 +8,7 @@ security:
 
     role_hierarchy:
         ROLE_ADMIN: [ROLE_HIRUGARRENAK]
+        
     # https://symfony.com/doc/current/security.html#loading-the-user-the-user-provider
     providers:
         amreu_user_provider:
@@ -28,6 +29,7 @@ security:
 
             custom_authenticators:
                     - amreu.login.form.passportauthenticator
+                    - amreu.ldap.basic.passportauthenticator
             entry_point: amreu.login.form.passportauthenticator
                 
             logout:
@@ -47,6 +49,7 @@ security:
         - { path: "^/resetting", role: PUBLIC_ACCESS }
         - { path: "^/[es|eu]", role: ROLE_HIRUGARRENAK }
         - { path: "^/[es|eu]/admin", role: ROLE_ADMIN }
+        - { path: "^/api", role: ROLE_API }
 
 when@test:
     security:

@@ -1,12 +1,11 @@
-<div class="container-fluid" {# {{ stimulus_controller('modal') }}#}> 
+<div class="container-fluid"> 
 	{% if thirds is defined and thirds|length > 0 %}
 		<table id="taula" class="table bootstrap-table mt-3" {{ stimulus_controller('table', { 
 				'url': path('third_index'), 
 				'exportName': 'thirds', 
-		} ) }} {# data-page-number="{{ page }}" data-page-size="{{ pageSize ?? 100 }}" data-page-sortname="{{ sortName }}" data-page-sortorder="{{ sortOrder }}"#}> 
+		} ) }}> 
 			<thead>
 				<tr>
-					{# <th data-sortable="true">{{ 'third.id' | trans }}</th> #}
 					<th data-sortable="true">{{ 'third.nif' | trans }}</th>
 					<th data-sortable="true">{{ 'third.full_name' | trans }}</th>
 					{% if operation == "language" %}
@@ -14,14 +13,13 @@
 					{% elseif operation == "errolda" %}
 						<th data-sortable="true">{{ 'third.erroldatua' | trans }}</th>
 					{% else %}
-
+						<th data-sortable="true">{{ 'third.hasDebts' | trans }}</th>
 					{% endif %}
 				</tr>
 			</thead>
 			<tbody>
 				{% for third in thirds.content %}
 					<tr>
-						{# <td>{{ third.id }}</td> #}
 						<td>{{ third.nif }}</td>
 						<td>{{ third.full_name }}</td>
 							{% if operation == "language" %}
@@ -33,7 +31,9 @@
 									{% endif %}
 								</td>
 							{% else %}
-								<td>{{ third.debts is defined ? third.debts : 'label.debts'  | trans }}</td>
+								{% if third.debts is defined %}
+									<td>{{ third.debts ? 'label.yes' | trans : 'label.no' | trans }}</td>
+								{% endif %}
 							{% endif %}
 					</tr>
 				{% endfor %}
@@ -46,8 +46,4 @@
 			{{'message.results0' | trans }}
 		</div>
 	{% endif %}
-	{# {{ include('common/_modal.html.twig', {
-      		'modalTitle': 'modal.title.observation' | trans,
-      		}) 
-   		}} #}
 </div>

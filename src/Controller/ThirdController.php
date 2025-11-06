@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Form\ThirdSearchType;
 use App\Form\ThirdType;
+use App\Services\ErreziboakApiService;
 use App\Services\ErroldaApiService;
 use App\Services\GestionaApiService;
 use Symfony\Component\HttpFoundation\Request;
@@ -17,6 +18,7 @@ final class ThirdController extends BaseController
 {
 
     public function __construct(
+        private readonly ErreziboakApiService $erreziboakApiService,
         private readonly ErroldaApiService $errolda,
         private readonly GestionaApiService $gestiona,
     ) {}
@@ -45,50 +47,27 @@ final class ThirdController extends BaseController
                     if (isset($data['nif'])) {
                         $operation = ThirdSearchType::CHECK_CHOICES['check.language'];
                         $thirds = $this->checkLanguagePreference($data['nif']);
-                        //dd($thirds);
                     } else {
-                        $this->addFlash('error', 'message.nifRequiredForLanguageCheck');
+                        $this->addFlash('error', 'message.nifRequired');
                     }
-                    // return $this->render('third/index.html.twig', [
-                    //     'thirds' => $thirds,
-                    //     'form' => $form,
-                    // ]);
                     break;
                 case ThirdSearchType::CHECK_CHOICES['check.errolda']:
                     if (isset($data['nif'])) {
                         $operation = ThirdSearchType::CHECK_CHOICES['check.errolda'];
                         $thirds = $this->checkErrolda($data['nif']);
                     } else {
-                        $this->addFlash('error', 'message.nifRequiredForLanguageCheck');
+                        $this->addFlash('error', 'message.nifRequired');
                     }
                     break;
                 case ThirdSearchType::CHECK_CHOICES['check.debts']:
                     $operation = ThirdSearchType::CHECK_CHOICES['check.debts'];
-                    // Implement debts check logic here
+                    if (isset($data['nif'])) {
+                        $thirds = $this->checkDebts($data['nif']);
+                    } else {
+                        $this->addFlash('error', 'message.nifRequired');
+                    }
                     break;
             }
-
-            // if (isset($data['id'])) {
-            //     $id = $data['id'];
-            //     $thirds = $this->gestiona->getThird($id, true);
-            //     //dd($thirds);
-            // } elseif (isset($data['nif'])) {
-            //     $nif = $data['nif'];
-            //     $habitante = $this->errolda->getActiveCitizenByNif($nif);
-            //     $thirds = $this->gestiona->getThirdsByNif($nif);
-            //     dd($habitante, $thirds);
-            // } else {
-            //     $thirds = $this->gestiona->getThirds();
-            // }
-
-            // if (empty($startIp) && empty($endIp)) {
-            //     $this->addFlash('error', 'message.computererror.search');
-
-            return $this->render('third/index.html.twig', [
-                'thirds' => $thirds,
-                'operation' => $operation,
-                'form' => $form,
-            ]);
         }
 
         return $this->render('third/index.html.twig', [
@@ -101,7 +80,6 @@ final class ThirdController extends BaseController
     private function checkLanguagePreference(string $nif): array
     {
         $thirds = $this->gestiona->getThirdsByNif($nif);
-        //dd($thirds);
         return $thirds;
     }
 
@@ -127,7 +105,22 @@ final class ThirdController extends BaseController
         return $thirds;
     }
 
-    
+    private function checkDebts(string $nif): array
+    {
+        $thirds = [
+            'page' => 1,
+            'content' => [],
+            'links' => []
+        ];
+        $debts = $this->erreziboakApiService->getHasDebts($nif);
+        if ($debts !== null) {
+            $content = $thirds['content'];
+            $content = array_merge($content, $debts);
+            $thirds['content'][] = $content;
+        }
+        return $thirds;
+    }
+  
 
     #[Route('/third/export/{maxResults}', name: 'third_index_export', defaults: ['maxResults' => 100])]
     public function indexexport(Request $request, int $maxResults): Response

@@ -3,13 +3,9 @@
 {% block title %}{{ 'title.third.search' | trans }}{% endblock %}
 
 {% block body %}
-    {# <div {{ stimulus_controller('reload-content', {
-                    url: path('loan_index', { ajax: 1 })
-                }) }}> #}
     <div>
         <div class="container-fluid">
             {{ include('third/_formSearchForm.html.twig') }}
-            
             <div class="mt-4">
                 <div data-reload-content-target="content">
                     {{ include('third/_list.html.twig') }}
@@ -19,11 +15,6 @@
                        <i class="fas fa-plus" title='{{ "btn.new" | trans | capitalize }}'></i>
                     </a>
                 </div>
-            </div>
-            <div>
-             {#   {{ include('common/_modal.html.twig', {
-                    modalTitle: 'modal.title.loanNew' | trans,
-                }) }} #}
             </div>
         </div>
     </div>

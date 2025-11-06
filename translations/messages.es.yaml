@@ -37,6 +37,7 @@ third.zip_code: "Código postal"
 third.type_of_road: "Tipo de vía"
 third.default_address: "Dirección por defecto"
 third.erroldatua: "Empadronado"
+third.hasDebts: "¿Tiene deudas?"
 
 # Buttons
 btn.cancel: "Cancelar"
@@ -46,7 +47,7 @@ btn.new: "Nuevo"
 # Messages
 message.results0: "No hay resultados"
 #message.fillAtLeastOneField: "El id o DNI son obligatorios"
-message.nifRequiredForLanguageCheck: "Debe introducir el DNI, NIF, NIE o pasaporte"
+message.nifRequired: "Debe introducir el DNI, NIF, NIE o pasaporte"
 es: "Castellano"
 eu: "Euskera"
 
