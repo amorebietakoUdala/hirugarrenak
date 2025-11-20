@@ -1155,6 +1155,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@hotwired/stimulus-webpack-helpers@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@hotwired/stimulus-webpack-helpers@npm:1.0.1"
+  peerDependencies:
+    "@hotwired/stimulus": ">= 3.0"
+  checksum: 68d833f74fb90f2993c7baed6e542880c23416a129b50cadc00571102c782f6bdc8c68742ecdd668cc702aa0fafd8888f91098ed7dc43c12b2212fe5969ef6cd
+  languageName: node
+  linkType: hard
+
 "@hotwired/stimulus@npm:^3.0.0, @hotwired/stimulus@npm:^3.2.2":
   version: 3.2.2
   resolution: "@hotwired/stimulus@npm:3.2.2"
@@ -1283,23 +1292,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@symfony/stimulus-bundle@npm:^2.24.0":
-  version: 2.24.0
-  resolution: "@symfony/stimulus-bundle@npm:2.24.0"
+"@symfony/stimulus-bridge@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "@symfony/stimulus-bridge@npm:4.0.1"
+  dependencies:
+    "@hotwired/stimulus-webpack-helpers": ^1.0.1
+    "@types/webpack-env": ^1.16.4
+    loader-utils: ^2.0.0 || ^3.0.0
+    schema-utils: ^3.0.0 || ^4.0.0
   peerDependencies:
-    "@hotwired/stimulus": ^3.0.0
-    "@symfony/stimulus-bridge": ^3.2.0 || ^4.0.0
-  checksum: 71e5e758bc9904c611a0932b8bcba8ebc6f346c0c1c4e25766f7879d44f9adf8fcfcdf5beff8d946bef5640bc8d98f0176d29d6a9752d442d8d2f04c68a4fec6
-  languageName: node
-  linkType: hard
-
-"@symfony/ux-turbo@npm:^2.24.0":
-  version: 2.24.0
-  resolution: "@symfony/ux-turbo@npm:2.24.0"
-  peerDependencies:
-    "@hotwired/stimulus": ^3.0.0
-    "@hotwired/turbo": ^7.1.1 || ^8.0
-  checksum: 2f214800aca5b0335aa6d3a3c671ed6560de5c3dd27482b1284647c98e00c8e581c1297a0c91691f70451b8181279b585b694714047b304f68c5654bee319f78
+    "@hotwired/stimulus": ^3.0
+  checksum: e17e078b9b2a24347dc082be814193bd2750679ff626e89534a96fed9f608ce6e73ef2b829b7f8cef0fefb49cadf5b6d0af70e5adfea9224d54c86b3545029ce
   languageName: node
   linkType: hard
 
@@ -1502,6 +1505,13 @@ __metadata:
   version: 2.0.7
   resolution: "@types/trusted-types@npm:2.0.7"
   checksum: 8e4202766a65877efcf5d5a41b7dd458480b36195e580a3b1085ad21e948bc417d55d6f8af1fd2a7ad008015d4117d5fdfe432731157da3c68678487174e4ba3
+  languageName: node
+  linkType: hard
+
+"@types/webpack-env@npm:^1.16.4":
+  version: 1.18.8
+  resolution: "@types/webpack-env@npm:1.18.8"
+  checksum: f6a13276e23c6573ee2a7c7ae7b0705a9cd982c3a31197ba6fa6f3d3bd6fd921194a67c960249b1554ef4c70b6736a3437284a01f659f145fe2b56c3196a7908
   languageName: node
   linkType: hard
 
@@ -3525,6 +3535,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"loader-utils@npm:^2.0.0 || ^3.0.0":
+  version: 3.3.1
+  resolution: "loader-utils@npm:3.3.1"
+  checksum: d35808e081635e5bc50228a52ed79f83e2c82bd8f7578818c12b1b4cf0b7f409d72d9b93a683ec36b9eaa93346693d3f3c8380183ba2ff81599b0829d685de39
+  languageName: node
+  linkType: hard
+
 "locate-path@npm:^5.0.0":
   version: 5.0.0
   resolution: "locate-path@npm:5.0.0"
@@ -4513,8 +4530,7 @@ __metadata:
     "@fortawesome/fontawesome-free": ^6.7.2
     "@hotwired/stimulus": ^3.2.2
     "@popperjs/core": ^2.11.8
-    "@symfony/stimulus-bundle": ^2.24.0
-    "@symfony/ux-turbo": ^2.24.0
+    "@symfony/stimulus-bridge": ^4.0.1
     "@symfony/webpack-encore": ^5.0.0
     bootstrap: ^5.2
     core-js: ^3.38.0
@@ -4566,6 +4582,18 @@ __metadata:
     ajv: ^6.12.5
     ajv-keywords: ^3.5.2
   checksum: ea56971926fac2487f0757da939a871388891bc87c6a82220d125d587b388f1704788f3706e7f63a7b70e49fc2db974c41343528caea60444afd5ce0fe4b85c0
+  languageName: node
+  linkType: hard
+
+"schema-utils@npm:^3.0.0 || ^4.0.0":
+  version: 4.3.3
+  resolution: "schema-utils@npm:4.3.3"
+  dependencies:
+    "@types/json-schema": ^7.0.9
+    ajv: ^8.9.0
+    ajv-formats: ^2.1.1
+    ajv-keywords: ^5.1.0
+  checksum: 4e20404962fd45d5feb5942f7c9ab334a3d3dab94e15001049bd49e2959015f2c59089353953d4976fe664462c79121dea50392968182d4e2c4b75803f822fa3
   languageName: node
   linkType: hard
 
