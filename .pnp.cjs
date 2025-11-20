@@ -28,7 +28,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
-            ["@amorebietakoudala/stimulus-controller-bundle", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#file:vendor/amorebietakoudala/stimulus-controller-bundle/assets#vendor/amorebietakoudala/stimulus-controller-bundle/assets::hash=58706c&locator=root-workspace-0b6124%40workspace%3A."],\
+            ["@amorebietakoudala/stimulus-controller-bundle", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#file:vendor/amorebietakoudala/stimulus-controller-bundle/assets#vendor/amorebietakoudala/stimulus-controller-bundle/assets::hash=704255&locator=root-workspace-0b6124%40workspace%3A."],\
             ["@babel/core", "npm:7.26.10"],\
             ["@babel/preset-env", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#npm:7.26.9"],\
             ["@fortawesome/fontawesome-free", "npm:6.7.2"],\
@@ -49,30 +49,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@amorebietakoudala/stimulus-controller-bundle", [\
-        ["file:vendor/amorebietakoudala/stimulus-controller-bundle/assets#vendor/amorebietakoudala/stimulus-controller-bundle/assets::hash=58706c&locator=root-workspace-0b6124%40workspace%3A.", {\
-          "packageLocation": "./.yarn/cache/@amorebietakoudala-stimulus-controller-bundle-file-daa5d97cc5-9113715e40.zip/node_modules/@amorebietakoudala/stimulus-controller-bundle/",\
+        ["file:vendor/amorebietakoudala/stimulus-controller-bundle/assets#vendor/amorebietakoudala/stimulus-controller-bundle/assets::hash=704255&locator=root-workspace-0b6124%40workspace%3A.", {\
+          "packageLocation": "./.yarn/cache/@amorebietakoudala-stimulus-controller-bundle-file-466be086bc-b2c9f71a52.zip/node_modules/@amorebietakoudala/stimulus-controller-bundle/",\
           "packageDependencies": [\
-            ["@amorebietakoudala/stimulus-controller-bundle", "file:vendor/amorebietakoudala/stimulus-controller-bundle/assets#vendor/amorebietakoudala/stimulus-controller-bundle/assets::hash=58706c&locator=root-workspace-0b6124%40workspace%3A."]\
+            ["@amorebietakoudala/stimulus-controller-bundle", "file:vendor/amorebietakoudala/stimulus-controller-bundle/assets#vendor/amorebietakoudala/stimulus-controller-bundle/assets::hash=704255&locator=root-workspace-0b6124%40workspace%3A."]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#file:vendor/amorebietakoudala/stimulus-controller-bundle/assets#vendor/amorebietakoudala/stimulus-controller-bundle/assets::hash=58706c&locator=root-workspace-0b6124%40workspace%3A.", {\
-          "packageLocation": "./.yarn/__virtual__/@amorebietakoudala-stimulus-controller-bundle-virtual-60f7f19db5/0/cache/@amorebietakoudala-stimulus-controller-bundle-file-daa5d97cc5-9113715e40.zip/node_modules/@amorebietakoudala/stimulus-controller-bundle/",\
+        ["virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#file:vendor/amorebietakoudala/stimulus-controller-bundle/assets#vendor/amorebietakoudala/stimulus-controller-bundle/assets::hash=704255&locator=root-workspace-0b6124%40workspace%3A.", {\
+          "packageLocation": "./.yarn/__virtual__/@amorebietakoudala-stimulus-controller-bundle-virtual-d175df3bc7/0/cache/@amorebietakoudala-stimulus-controller-bundle-file-466be086bc-b2c9f71a52.zip/node_modules/@amorebietakoudala/stimulus-controller-bundle/",\
           "packageDependencies": [\
-            ["@amorebietakoudala/stimulus-controller-bundle", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#file:vendor/amorebietakoudala/stimulus-controller-bundle/assets#vendor/amorebietakoudala/stimulus-controller-bundle/assets::hash=58706c&locator=root-workspace-0b6124%40workspace%3A."],\
-            ["@eonasdan/tempus-dominus", "virtual:60f7f19db5514e364b2aefb6ff559c0991750bda23859bc34ce14f3480c7e0e4e03092ca94126e552997abc6ecfc27dcceb4e954ed91578f0eb6ca6ffb2de9ef#npm:6.10.3"],\
+            ["@amorebietakoudala/stimulus-controller-bundle", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#file:vendor/amorebietakoudala/stimulus-controller-bundle/assets#vendor/amorebietakoudala/stimulus-controller-bundle/assets::hash=704255&locator=root-workspace-0b6124%40workspace%3A."],\
+            ["@eonasdan/tempus-dominus", "virtual:d175df3bc74398e5a769b43d5a8969c2469655f627945841f1506aef832a849597ad45518c1ec09db6d23a02457c7191803fe1b8b56ba20d22648a97c16d913d#npm:6.10.3"],\
             ["@hotwired/stimulus", "npm:3.2.2"],\
+            ["@popperjs/core", "npm:2.11.8"],\
             ["@types/bootstrap", null],\
             ["@types/bootstrap-table", null],\
             ["@types/eonasdan__tempus-dominus", null],\
             ["@types/hotwired__stimulus", null],\
             ["@types/jquery", null],\
+            ["@types/popperjs__core", null],\
             ["@types/select2", null],\
             ["@types/select2-bootstrap-5-theme", null],\
             ["@types/sweetalert2", null],\
             ["@types/tableexport.jquery.plugin", null],\
             ["bootstrap", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#npm:5.3.5"],\
-            ["bootstrap-table", "virtual:60f7f19db5514e364b2aefb6ff559c0991750bda23859bc34ce14f3480c7e0e4e03092ca94126e552997abc6ecfc27dcceb4e954ed91578f0eb6ca6ffb2de9ef#npm:1.21.1"],\
+            ["bootstrap-table", "virtual:d175df3bc74398e5a769b43d5a8969c2469655f627945841f1506aef832a849597ad45518c1ec09db6d23a02457c7191803fe1b8b56ba20d22648a97c16d913d#npm:1.21.1"],\
             ["jquery", "npm:3.7.1"],\
             ["select2", "npm:4.1.0-rc.0"],\
             ["select2-bootstrap-5-theme", "npm:1.3.0"],\
@@ -81,11 +83,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "packagePeers": [\
             "@hotwired/stimulus",\
+            "@popperjs/core",\
             "@types/bootstrap-table",\
             "@types/bootstrap",\
             "@types/eonasdan__tempus-dominus",\
             "@types/hotwired__stimulus",\
             "@types/jquery",\
+            "@types/popperjs__core",\
             "@types/select2-bootstrap-5-theme",\
             "@types/select2",\
             "@types/sweetalert2",\
@@ -2038,11 +2042,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:60f7f19db5514e364b2aefb6ff559c0991750bda23859bc34ce14f3480c7e0e4e03092ca94126e552997abc6ecfc27dcceb4e954ed91578f0eb6ca6ffb2de9ef#npm:6.10.3", {\
-          "packageLocation": "./.yarn/__virtual__/@eonasdan-tempus-dominus-virtual-c0e3aecd7c/0/cache/@eonasdan-tempus-dominus-npm-6.10.3-1752862957-b3eff17c1e.zip/node_modules/@eonasdan/tempus-dominus/",\
+        ["virtual:d175df3bc74398e5a769b43d5a8969c2469655f627945841f1506aef832a849597ad45518c1ec09db6d23a02457c7191803fe1b8b56ba20d22648a97c16d913d#npm:6.10.3", {\
+          "packageLocation": "./.yarn/__virtual__/@eonasdan-tempus-dominus-virtual-153066dc09/0/cache/@eonasdan-tempus-dominus-npm-6.10.3-1752862957-b3eff17c1e.zip/node_modules/@eonasdan/tempus-dominus/",\
           "packageDependencies": [\
-            ["@eonasdan/tempus-dominus", "virtual:60f7f19db5514e364b2aefb6ff559c0991750bda23859bc34ce14f3480c7e0e4e03092ca94126e552997abc6ecfc27dcceb4e954ed91578f0eb6ca6ffb2de9ef#npm:6.10.3"],\
-            ["@popperjs/core", null],\
+            ["@eonasdan/tempus-dominus", "virtual:d175df3bc74398e5a769b43d5a8969c2469655f627945841f1506aef832a849597ad45518c1ec09db6d23a02457c7191803fe1b8b56ba20d22648a97c16d913d#npm:6.10.3"],\
+            ["@popperjs/core", "npm:2.11.8"],\
             ["@popperjs/core\\"", null],\
             ["@types/popperjs__core", null],\
             ["@types/popperjs__core\\"", null]\
@@ -3180,10 +3184,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:60f7f19db5514e364b2aefb6ff559c0991750bda23859bc34ce14f3480c7e0e4e03092ca94126e552997abc6ecfc27dcceb4e954ed91578f0eb6ca6ffb2de9ef#npm:1.21.1", {\
-          "packageLocation": "./.yarn/__virtual__/bootstrap-table-virtual-93ea52ba59/0/cache/bootstrap-table-npm-1.21.1-a304a8f4d5-070a46e907.zip/node_modules/bootstrap-table/",\
+        ["virtual:d175df3bc74398e5a769b43d5a8969c2469655f627945841f1506aef832a849597ad45518c1ec09db6d23a02457c7191803fe1b8b56ba20d22648a97c16d913d#npm:1.21.1", {\
+          "packageLocation": "./.yarn/__virtual__/bootstrap-table-virtual-1a40d5bb1a/0/cache/bootstrap-table-npm-1.21.1-a304a8f4d5-070a46e907.zip/node_modules/bootstrap-table/",\
           "packageDependencies": [\
-            ["bootstrap-table", "virtual:60f7f19db5514e364b2aefb6ff559c0991750bda23859bc34ce14f3480c7e0e4e03092ca94126e552997abc6ecfc27dcceb4e954ed91578f0eb6ca6ffb2de9ef#npm:1.21.1"],\
+            ["bootstrap-table", "virtual:d175df3bc74398e5a769b43d5a8969c2469655f627945841f1506aef832a849597ad45518c1ec09db6d23a02457c7191803fe1b8b56ba20d22648a97c16d913d#npm:1.21.1"],\
             ["@types/jquery", null],\
             ["jquery", "npm:3.7.1"]\
           ],\
@@ -6478,7 +6482,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["root-workspace-0b6124", "workspace:."],\
-            ["@amorebietakoudala/stimulus-controller-bundle", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#file:vendor/amorebietakoudala/stimulus-controller-bundle/assets#vendor/amorebietakoudala/stimulus-controller-bundle/assets::hash=58706c&locator=root-workspace-0b6124%40workspace%3A."],\
+            ["@amorebietakoudala/stimulus-controller-bundle", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#file:vendor/amorebietakoudala/stimulus-controller-bundle/assets#vendor/amorebietakoudala/stimulus-controller-bundle/assets::hash=704255&locator=root-workspace-0b6124%40workspace%3A."],\
             ["@babel/core", "npm:7.26.10"],\
             ["@babel/preset-env", "virtual:dc3fc578bfa5e06182a4d2be39ede0bc5b74940b1ffe0d70c26892ab140a4699787750fba175dc306292e80b4aa2c8c5f68c2a821e69b2c37e360c0dff36ff66#npm:7.26.9"],\
             ["@fortawesome/fontawesome-free", "npm:6.7.2"],\
