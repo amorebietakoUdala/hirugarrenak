@@ -50,7 +50,6 @@ class ProcessThirdCheckFileHandler
     private function checkLanguagePreference(string $nif): array
     {
         $thirds = $this->gestiona->getThirdsByNif($nif);
-        dump($thirds);
         return $thirds;
     }
 
