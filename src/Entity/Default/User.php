@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Entity;
+namespace App\Entity\Default;
 
-use App\Repository\UserRepository;
+use App\Repository\Default\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 use AMREU\UserBundle\Model\UserInterface as AMREUserInterface;
 use AMREU\UserBundle\Model\User as BaseUser;

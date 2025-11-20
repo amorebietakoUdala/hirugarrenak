@@ -18,12 +18,13 @@
 				</tr>
 			</thead>
 			<tbody>
+				
 				{% for third in thirds.content %}
 					<tr>
 						<td>{{ third.nif }}</td>
 						<td>{{ third.full_name }}</td>
 							{% if operation == "language" %}
-								<td>{{ third.language_preference is defined ? third.language_preference : 'label.notDefined'  | trans }}</td>
+								<td>{{ third.language_preference is defined ? third.language_preference | trans : 'label.notDefined'  | trans }}</td>
 							{% elseif operation == "errolda" %}
 								<td>
 									{% if third.erroldatua is defined %}

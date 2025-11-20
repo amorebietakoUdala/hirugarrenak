@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Security\Http\Attribute\IsGranted;
@@ -28,7 +29,7 @@ final class GestionaApiService extends AbstractController
         return $jsonFilter;
     }
 
-    public function getThirds(?string $jsonFilter = null): array
+    private function getThirds(?string $jsonFilter = null): array
     {
         $uri = '/thirds';
         if ($jsonFilter !== null) {
@@ -42,11 +43,10 @@ final class GestionaApiService extends AbstractController
             ]
         ]);
         
-        if ($result->getStatusCode() >= 300) {
-            throw new \Exception('Error fetching data from Gestiona API: ' . $result->getStatusCode());
-        }
-
         $statusCode = $result->getStatusCode();
+        if ($statusCode >= 300) {
+            throw new \Exception('Error fetching data from Gestiona API: ' . $statusCode);
+        }
 
         if ($statusCode === 204) {
             $content = $this->createEmptyResult();
@@ -110,7 +110,7 @@ final class GestionaApiService extends AbstractController
         }
 
         // Crear el escritor de CSV en modo escritura
-        $csv = Writer::createFromPath($filePath, 'w+');
+        $csv = Writer::from($filePath, 'w+');
         $csv->setEscape('');
 
         // Insertar cabeceras y datos
@@ -124,8 +124,18 @@ final class GestionaApiService extends AbstractController
         }
     }
 
+    public function getThirdById(string $id, $asSearchResult = true): array
+    {
+        try {
+            $third = $this->getThird($id, false);
+        } catch (\Exception $e) {
+            return $this->createErrorResult('', $e);
+        }
+        return $third;
 
-    public function getThird(string $id, $asSearchResult = true): array
+    }
+
+    private function getThird(string $id, $asSearchResult = true): array
     {
         $response = [];
         $result = $this->httpClient->request('GET', $this->gestionaApiUrl . '/thirds/' . $id, [
@@ -133,15 +143,17 @@ final class GestionaApiService extends AbstractController
                 'X-Gestiona-Access-Token' => $this->gestionaApiAccessToken,
             ]
         ]);
+
+        $statusCode = $result->getStatusCode();
+        if ($statusCode >= 300) {
+            throw new \Exception('Error fetching data from Gestiona API: ' . $statusCode);
+        }
+
         if (!$asSearchResult) {
             $response['content'][0] = $result->toArray();
         } else {
             $response = $this->createEmptyResult();
             $response['content'][0] = $result->toArray();
-        }
-
-        if ($result->getStatusCode() >= 300) {
-            throw new \Exception('Error fetching data from Gestiona API: ' . $result->getStatusCode());
         }
 
         return $response;
@@ -151,7 +163,12 @@ final class GestionaApiService extends AbstractController
     {
         $filter = ['nif' => $nif];
         $jsonFilter = $this->addFilterFromArray($filter);
-        return $this->getThirds($jsonFilter);
+        try {
+            $thirds = $this->getThirds($jsonFilter);
+        } catch (\Exception $e) {
+            return $this->createErrorResult($nif, $e);
+        }
+        return $thirds;
     }
 
     private function createEmptyResult(): array
@@ -162,4 +179,21 @@ final class GestionaApiService extends AbstractController
             'links' => []
         ];
     }
+
+    private function createErrorResult($nif, \Exception $e): array
+    {
+        $thirds = $this->createEmptyResult();
+        $thirds = array_merge($thirds,[
+            'error' => $e->getMessage(),
+            'content' => [
+                [
+                    'nif' => $nif,
+                    'full_name' => '',
+                    'language_preference' => $e->getMessage(),
+                ]
+            ],
+        ]);
+        return $thirds;
+    }
+
 }

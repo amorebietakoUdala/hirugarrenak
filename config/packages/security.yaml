@@ -1,7 +1,7 @@
 security:
     # https://symfony.com/doc/current/security.html#registering-the-user-hashing-passwords
     password_hashers:
-        App\Entity\User:
+        App\Entity\Default\User:
             algorithm: bcrypt
 
         Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface: 'auto'
@@ -13,7 +13,7 @@ security:
     providers:
         amreu_user_provider:
             entity:
-                class: App\Entity\User
+                class: App\Entity\Default\User
                 property: username
 
     firewalls:
@@ -37,7 +37,8 @@ security:
 
             remember_me:
                 secret: "%kernel.secret%"
-                lifetime: 2592000                
+                lifetime: 2592000
+                name: "REMEMBERME_%app_name%"
 
             # https://symfony.com/doc/current/security/impersonating_user.html
             # switch_user: true

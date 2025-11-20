@@ -1,5 +1,5 @@
 user:
-    class: 'App\Entity\User'
+    class: 'App\Entity\Default\User'
     #form_type: 'App\Form\UserType'
     domain: '%env(LDAP_ACCOUNTDOMAINNAME)%'
     ldap_users_dn: '%env(LDAP_USERS_DN)%'

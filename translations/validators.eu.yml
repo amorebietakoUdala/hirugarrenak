@@ -1,0 +1,7 @@
+"Select a valid csv file.": "CSV fitxategia zuzen bat hautatu."
+"too_much_fields": "Hurrengo eremuak soberan daude: %invalid_headers%"
+"too_few_fields": "Ondorengo eremuak falta dira: %invalid_headers%"
+"incorrect_field_names": "Hurrengo eremuen izenak ez dira zuzenak: %invalid_headers%"
+"fields_with_missing_values": "Hurrengo eremuek baliorik ez duten lerroak dituzte, eta nahitaezkoak dira: %fields%"
+"invalid_dni": "Lerroa %invalid_row%: '%invalid_value%' hau ez da NAN, AIZ edo IFKa zuzen bat"
+validation.invalidDNI-NIE-NIF: "NAN, ANA edo IFZ ez da zuzena"

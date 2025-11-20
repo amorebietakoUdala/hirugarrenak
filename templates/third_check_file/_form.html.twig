@@ -1,0 +1,20 @@
+<div class="container-fluid">
+	{{ form_start(form, {attr: {novalidate: 'novalidate'}}) }}
+	<div
+		class="row align-items-end d-flex align-items-center">
+		<!-- file -->
+		<div class="col-lg-2 col-md-1 mb-3">
+			{{ form_row(form.file, {
+            'attr': {'class': 'form-control form-control-sm'},
+         }) }}
+		</div>
+
+		<!-- Botón de búsqueda -->
+		<div class="col-md-2 mb-3">
+			<button type="submit" class="btn btn-primary btn">{{ 'btn.search' | trans }}</button>
+			<a href="{{path('third_check_file_index')}}" class="btn btn-secondary btn">{{ 'btn.refresh' | trans }}</a>
+		</div>
+
+	</div>
+	{{ form_end(form) }}
+</div>

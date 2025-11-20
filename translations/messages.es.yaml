@@ -1,15 +1,40 @@
 message.appTitle: "Terceros"
 link.logout: "Salir"
 
+# User Bundle 
+security.login.username: "Nombre de usuario"
+security.login.password: "Contraseña"
+security.login.remember_me: "Recordarme"
+security.login.submit: "Entrar"
+security.login.invalid_credentials: "El usuario y contraseña no son correctos"
+security.login.system_error: "Debido a un error del sistema, no se puede comprobar el usuario"
+security.login.remember_password: "Se te ha olvidado la contraseña?"
+security.password:
+security.resetted: "La contraseña se ha cambiado"
+btn.loginera.itzuli: "Volver a la página de login"
+"Credenciales no válidas.": "Credenciales no válidas."
+user.id: "Id"
+user.username: "Nombre de usuario"
+user.firstName: "Nombre"
+user.roles: "Roles"
+user.email: "Email"
+user.new_password: "Nueva contraseña"
+user.repeat_new_password: "Repetir nueva contraseña"
+
 # Menu
 navitem.thirds: "Terceros"
-navitem.thirds.list: "Lista"
+navitem.thirds.index: "Búsqueda individual"
+navitem.thirds.checkFile.index: "Búsqueda por lotes"
+navitem.thirds.checkFile.download: "Descarga de resultados por lotes"
+navitem.administration: "Administración"
+navitem.users: "Usuarios"
 
 # Labels
 label.options: 'Opciones'
 label.yes: "Sí"
 label.no: "No"
 label.notDefined: "No definido"
+options: "Opciones"
 
 check.third: "Comprobar"
 check.language: "Preferencia de idioma"
@@ -38,11 +63,26 @@ third.type_of_road: "Tipo de vía"
 third.default_address: "Dirección por defecto"
 third.erroldatua: "Empadronado"
 third.hasDebts: "¿Tiene deudas?"
+third.checkFile.file: "Fichero"
+
+thirdCheckFile.fileName: "Fichero"
+thirdCheckFile.receptionDate: "Fecha de recepción"
+thirdCheckFile.processdedDate: "Fecha de procesado"
+thirdCheckFile.status: "Estado"
+
+thirdCheckFile.status.choices.0: "Sin procesar"
+thirdCheckFile.status.choices.1: "Procesando"
+thirdCheckFile.status.choices.2: "Procesado"
+thirdCheckFile.status.choices.3: "Inválido"
+thirdCheckFile.status.choices.4: "Fallado"
 
 # Buttons
 btn.cancel: "Cancelar"
 btn.save: "Guardar"
 btn.new: "Nuevo"
+btn.search: "Buscar"
+btn.send: "Bidali"
+btn.refresh: "Refrescar"
 
 # Messages
 message.results0: "No hay resultados"
@@ -50,6 +90,9 @@ message.results0: "No hay resultados"
 message.nifRequired: "Debe introducir el DNI, NIF, NIE o pasaporte"
 es: "Castellano"
 eu: "Euskera"
+
+message.successfullySended : "El fichero se ha enviado correctamente"
+message.fileNotSelected: "Debe seleccionar un fichero"
 
 # Mail
 

@@ -1,0 +1,39 @@
+<div class="container-fluid"> 
+	{% if thirdCheckFiles is defined and thirdCheckFiles|length > 0 %}
+		<table id="taula" class="table bootstrap-table mt-3" {{ stimulus_controller('table', { 
+				'url': path('third_check_file_index'), 
+				'exportName': 'thirdCheckFile', 
+		} ) }}> 
+			<thead>
+				<tr>
+					<th data-sortable="true">{{ 'thirdCheckFile.fileName' | trans }}</th>
+					<th data-sortable="true">{{ 'thirdCheckFile.receptionDate' | trans }}</th>
+					<th data-sortable="true">{{ 'thirdCheckFile.processdedDate' | trans }}</th>
+					<th data-sortable="true">{{ 'thirdCheckFile.status' | trans }}</th>
+					<th data-sortable="true">{{ 'options' | trans }}</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for thirdCheckFile in thirdCheckFiles %}
+					<tr>
+						<td>{{ thirdCheckFile.fileName }}</td>
+						<td>{{ thirdCheckFile.receptionDate is defined ? thirdCheckFile.receptionDate | date('Y-m-d h:i')  }}</td>
+						<td>{{ thirdCheckFile.processdedDate is defined ? thirdCheckFile.processdedDate | date('Y-m-d h:i')}}</td>
+						<td>{{ ('thirdCheckFile.status.choices.' ~ thirdCheckFile.status) | trans }}</td>
+						<td>
+							{% if thirdCheckFile.status == constant('App\\Entity\\Default\\ThirdCheckFile::STATUS_PROCESSED') %}
+								<a href="{{ path('third_check_file_download', { 'thirdCheckFile': thirdCheckFile.id }) }}"><i class="fa fa-download"></i></a>
+							{% endif %}
+						</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+
+		{# {{ include('common/_alert.html.twig') }} #}
+	{% else %}
+		<div class="alert alert-info text-center">
+			{{'message.results0' | trans }}
+		</div>
+	{% endif %}
+</div>

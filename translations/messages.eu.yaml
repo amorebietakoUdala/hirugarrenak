@@ -1,15 +1,40 @@
 message.appTitle: "Hirugarrenak"
 link.logout: "Salir"
 
+# User Bundle
+security.login.username: "Erabiltzailea"
+security.login.password: "Pasahitza"
+security.login.remember_me: "Oroitu"
+security.login.submit: "Sartu"
+security.login.invalid_credentials: "Erabiltzailea eta pasahitza ez dira zuzenak"
+security.login.system_error: "Sistema akatsa dela eta, ezin da erabiltzailea konprobatu. Saiatu geroago."
+security.login.remember_password: "Pasahitza ahaztu zaizu?"
+security.password:
+security.resetted: "Pasahitza ondo aldatu da"
+btn.loginera.itzuli: "Login orrialdera itzuli"
+"Erabiltzailea eta pasahitza ez dira zuzenak.": "Erabiltzailea eta pasahitza ez dira zuzenak."
+user.id: "Id"
+user.username: "Erabiltzailea"
+user.firstName: "Izena"
+user.roles: "Rolak"
+user.email: "Emaila"
+user.new_password: "Pasahitz berria"
+user.repeat_new_password: "Errepikatu pasahitz berria"
+
 # Menu
 navitem.thirds: "Hirugarrenak"
-navitem.thirds.list: "Zerrenda"
+navitem.thirds.index: "Banakako bilaketa"
+navitem.thirds.checkFile.index: "Taldekako bilaketa"
+navitem.thirds.checkFile.download: "Taldekako kontsulten emaitzen deskarga"
+navitem.administration: "Administrazioa"
+navitem.users: "Erabiltzaileak"
 
 # Labels
 label.options: 'Aukerak'
 label.yes: "Bai"
 label.no: "Ez"
 label.notDefined: "Zehaztu gabea"
+options: "Aukerak"
 
 check.third: "Konprobatu"
 check.language: "Hizkuntza lehentasuna"
@@ -38,17 +63,35 @@ third.type_of_road: "Errepide mota"
 third.default_address: "Lehenetsitako helbidea"
 third.erroldatua: "Erroldatua"
 third.hasDebts: "Zorrak ditu?"
+third.checkFile.file: "Fitxategia"
+
+thirdCheckFile.fileName: "Fitxategia"
+thirdCheckFile.receptionDate: "Jasotze data"
+thirdCheckFile.processdedDate: "Prozesatze data"
+thirdCheckFile.status: "Egoera"
+thirdCheckFile.status.choices.0: "Prozesatu barik"
+thirdCheckFile.status.choices.1: "Prozesatzen"
+thirdCheckFile.status.choices.2: "Prozesatuta"
+thirdCheckFile.status.choices.3: "Ezegokia"
+thirdCheckFile.status.choices.4: "Akatsduna"
 
 # Buttons
 btn.cancel: "Utzi"
 btn.save: "Gorde"
 btn.new: "Berria"
+btn.search: "Bilatu"
+btn.send: "Bidali"
+btn.refresh: "Freskatu"
+
 
 # Messages
 message.results0: "Ez da emaitzarik aurkitu"
 #message.fillAtLeastOneField: "IDa edo NANa derrigorrezkoak dira"
 message.nifRequired: "NANa, IFK, AIZ edo pasaportea"
-es: "Erdara"
+message.successfullySended : "Fitxategia behar bezala bidali da"
+es: "Gaztelera"
 eu: "Euskara"
+
+message.fileNotSelected: "Fitxategia hautatu behar duzu"
 
 # Mail

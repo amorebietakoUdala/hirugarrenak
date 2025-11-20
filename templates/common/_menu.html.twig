@@ -1,38 +1,31 @@
-{% if is_granted('ROLE_ZAIN') %}
+{% if is_granted('ROLE_HIRUGARRENAK') %}
 	<nav class="navbar navbar-expand navbar-light bg-light mb-2">
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item">
-					<a class="nav-link {{ app.request.attributes.get('_route') == 'languageHome' or 
-						app.request.attributes.get('_route') == 'admin_mevent_dashboard' ? 'active': '' }}" href="{{ path("languageHome",{'_locale': app.request.locale })}}">{{ 'menu.home' | trans }}<span class="sr-only">(current)</span>
+			<ul class="navbar-nav">
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle {{ app.request.attributes.get('_route') == 'third_index'  
+						or app.request.attributes.get('_route') == 'third_index_export' 
+						or app.request.attributes.get('_route') == 'third_edit' 
+						or app.request.attributes.get('_route') == 'third_show' 
+						or app.request.attributes.get('_route') == 'third_check_file_index'
+						or app.request.attributes.get('_route') == 'third_check_file_upload'
+						? 'active': '' }}" href="#" id="navbarThirds" data-bs-toggle="dropdown" aria-expanded="false">{{ 'navitem.thirds' | trans | capitalize }}
 					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarThirds">
+						<a class="dropdown-item" href="{{ path("third_index",{'_locale': app.request.locale })}}">{{ 'navitem.thirds.index' | trans }}</a>
+						<a class="dropdown-item" href="{{ path("third_check_file_index",{'_locale': app.request.locale })}}">{{ 'navitem.thirds.checkFile.index' | trans }}</a>
+					</div>
 				</li>
 				{% if is_granted('ROLE_ADMIN') %}
-					<li class="nav-item">
-						<a class="nav-link {{ app.request.attributes.get('_route') == 'admin_mevent_list' or 
-							app.request.attributes.get('_route') == 'admin_mevent_show' or 
-							app.request.attributes.get('_route') == 'admin_mevent_lastMatchedEvent' or
-							app.request.attributes.get('_route') == 'admin_mevent_search' or
-							app.request.attributes.get('_route') == 'admin_mevent_save_filter' or
-							app.request.attributes.get('_route') == 'admin_mevent_match' or
-							app.request.attributes.get('_route') == 'admin_mevent_try' or
-							app.request.attributes.get('_route') == 'admin_mevent_try_save' or 
-							app.request.attributes.get('_route') == 'admin_mevent_edit' or 
-							app.request.attributes.get('_route') == 'admin_mevent_new'
-							? 'active': '' }}" href="{{ path("admin_mevent_list")}}">{{ "menu.mevents" | trans | capitalize }}</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link {{ ( app.request.attributes.get('_route') == 'admin_event_list' ) ? 'active': '' }}" href="{{ path("admin_event_list")}}">{{ "menu.events" | trans | capitalize }}</a>
-					</li>
 					<li class="nav-item dropdown">
 						<a class="nav-link dropdown-toggle {{ ( app.request.attributes.get('_route') == 'admin_user_index' ) or
 							( app.request.attributes.get('_route') == 'admin_user_show' ) or
 							( app.request.attributes.get('_route') == 'admin_user_edit' )
 						 ? 'active': '' }}" href="#" id="navbarAdmin" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							{{ 'menu.administration' | trans | capitalize }}
+							{{ 'navitem.administration' | trans | capitalize }}
 						</a>
 						<div id="js-menu-administration" class="dropdown-menu" aria-labelledby="navbarAdmin">
-							<a class="dropdown-item" href="{{ path('admin_user_index') }}">{{"menu.users" | trans | capitalize}}</a>
+							<a class="dropdown-item" href="{{ path('admin_user_index') }}">{{"navitem.users" | trans | capitalize}}</a>
 						</div>
 					</li>
 				{% endif %}

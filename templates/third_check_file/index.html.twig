@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'title.third.search' | trans }}{% endblock %}
+
+{% block body %}
+    <div>
+        <div class="container-fluid">
+            {{ include('third_check_file/_form.html.twig') }}
+            <div class="mt-4">
+                <div data-reload-content-target="content">
+                    {{ include('third_check_file/_list.html.twig') }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -4,9 +4,12 @@ namespace App\Controller;
 
 use App\Form\ThirdSearchType;
 use App\Form\ThirdType;
+use App\Repository\Default\ThirdCheckFileRepository;
 use App\Services\ErreziboakApiService;
 use App\Services\ErroldaApiService;
 use App\Services\GestionaApiService;
+use App\Services\ThirdFileValidatorService;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
@@ -18,9 +21,13 @@ final class ThirdController extends BaseController
 {
 
     public function __construct(
+        private readonly EntityManagerInterface $em,
         private readonly ErreziboakApiService $erreziboakApiService,
         private readonly ErroldaApiService $errolda,
         private readonly GestionaApiService $gestiona,
+        private readonly ThirdFileValidatorService $validator,
+        private readonly string $thirdFileUploadDirectory,
+        private readonly ThirdCheckFileRepository $repo,
     ) {}
 
     #[Route('/third', name: 'third_index')]
@@ -34,14 +41,7 @@ final class ThirdController extends BaseController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $data = $form->getData();
-            if ( ( isset($data['id']) === false && isset($data['nif']) === false ) || (empty($data['id']) && empty($data['nif'])) ) {
-                $this->addFlash('error', 'message.fillAtLeastOneField');
 
-                return $this->render('third/index.html.twig', [
-                    'thirds' => $thirds,
-                    'form' => $form,
-                ]);
-            }
             switch ($data['check']) {
                 case ThirdSearchType::CHECK_CHOICES['check.language']:
                     if (isset($data['nif'])) {
@@ -120,7 +120,6 @@ final class ThirdController extends BaseController
         }
         return $thirds;
     }
-  
 
     #[Route('/third/export/{maxResults}', name: 'third_index_export', defaults: ['maxResults' => 100])]
     public function indexexport(Request $request, int $maxResults): Response
@@ -138,7 +137,7 @@ final class ThirdController extends BaseController
 
             if (isset($data['id'])) {
                 $id = $data['id'];
-                $thirds = $this->gestiona->getThird($id);
+                $thirds = $this->gestiona->getThirdById($id);
             } elseif (isset($data['nif'])) {
                 $nif = $data['nif'];
                 $thirds = $this->gestiona->getThirdsByNif($nif);
@@ -164,7 +163,7 @@ final class ThirdController extends BaseController
     public function edit(Request $request, $id): Response
     {
         $this->loadQueryParameters($request);
-        $third = $this->gestiona->getThird($id, false);
+        $third = $this->gestiona->getThirdById($id, false);
         if (isset($third['default_address'])) {
             $third = array_merge($third, $third['default_address']);
         }
@@ -191,7 +190,7 @@ final class ThirdController extends BaseController
     public function show(Request $request, $id): Response
     {
         $this->loadQueryParameters($request);
-        $third = $this->gestiona->getThird($id, false);
+        $third = $this->gestiona->getThirdById($id, false);
         
         if (isset($third['default_address'])) {
             $third = array_merge($third, $third['default_address']);
