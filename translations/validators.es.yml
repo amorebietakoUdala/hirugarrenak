@@ -1,7 +1,7 @@
 "Select a valid csv file.": "Introduzca un fichero csv válido."
 "too_much_fields": "Sobran los siguientes campos: %invalid_headers%"
 "too_few_fields": "Faltan los siguientes campos: %invalid_headers%"
-"incorrect_field_names": "Los siguientes campos no son válidos: %invalid_headers%"
+"incorrect_field_names": "Los siguientes campos no son válidos: %invalid_headers%. Los campos válidos son: %valid_headers%. Debe respectar la mayúsculas y minúsculas de las cabeceras"
 "fields_with_missing_values": "Los siguientes campos contienen valores vacíos que deben ser rellenados: %fields%"
 "invalid_dni": "Fila %invalid_row%: El DNI, NIE o CIF '%invalid_value%' no es válido"
 validation.invalidDNI-NIE-NIF: "El DNI,NIE o NIF no es correcto"

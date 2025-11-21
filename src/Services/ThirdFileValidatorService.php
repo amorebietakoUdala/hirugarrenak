@@ -31,11 +31,11 @@ class ThirdFileValidatorService
    public const TOO_FEW_FIELDS = 8;
 
    protected $validHeaders = [
-      'Dni',
+      'DNI',
    ];
 
    protected $requiredFields = [
-      'Dni',
+      'DNI',
    ];
 
 
@@ -116,13 +116,16 @@ class ThirdFileValidatorService
 
     protected function getHeaderValidationErrorMessage($key, $invalidHeaders)
     {
-        return $this->translator->trans($key,['%invalid_headers%' => $invalidHeaders],'validators');
+        return $this->translator->trans($key,[
+            '%invalid_headers%' => $invalidHeaders,
+            '%valid_headers%' => $this->validHeaders
+        ],'validators');
     }
 
     private function validateRecord($record, $numFila)
     {
-        if ( in_array('Dni', $this->requiredFields) ) {
-            $dniValidation = $this->validateDni($numFila, in_array('Dni', $this->requiredFields) ? $record['Dni'] : null);
+        if ( in_array('DNI', $this->requiredFields) ) {
+            $dniValidation = $this->validateDni($numFila, in_array('DNI', $this->requiredFields) ? $record['DNI'] : null);
             if (null !== $dniValidation) {
                 return $dniValidation;
             }
