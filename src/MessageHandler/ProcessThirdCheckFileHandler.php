@@ -60,7 +60,7 @@ class ProcessThirdCheckFileHandler
             'content' => [],
             'links' => []
         ];
-        $habitante = $this->errolda->getActiveCitizenByNif($nif);
+        $habitante = $this->errolda->getActiveCitizenByNif(mb_strtoupper($nif));
         if ($habitante != null) {
             $content = $thirds['content'];
             $habitante = 
