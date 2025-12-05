@@ -50,7 +50,6 @@ security:
         - { path: "^/resetting", role: PUBLIC_ACCESS }
         - { path: "^/[es|eu]", role: ROLE_HIRUGARRENAK }
         - { path: "^/[es|eu]/admin", role: ROLE_ADMIN }
-        - { path: "^/api", role: ROLE_API }
 
 when@test:
     security:
