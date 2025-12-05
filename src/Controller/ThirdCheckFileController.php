@@ -52,7 +52,7 @@ final class ThirdCheckFileController extends BaseController
                 $this->addFlash('error', 'message.fileNotSelected');
                 return $this->redirectToRoute('third_check_file_index');
             }
-            $this->validator->setRequiredFields(['Dni']);
+            $this->validator->setRequiredFields(['DNI']);
             $validationResult = $this->validator->validate($file);
             if ($validationResult['status'] !== $this->validator::VALID) {
                 $this->addFlash('error', $validationResult['message']);

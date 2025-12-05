@@ -100,7 +100,7 @@ class ProcessThirdCheckFileHandler
         $records = $csv->getRecords();
         $content = [];
         foreach ($records as $offset => $record) {
-            $dni = $record['Dni'];
+            $dni = $record['DNI'];
             $languagePreferenceResult = $this->checkLanguagePreference($dni);
             $erroldaResult = $this->checkErrolda($dni);
             $debtsResult = $this->checkDebts($dni);
